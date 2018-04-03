@@ -65,7 +65,7 @@ exports.plugin = {
       var response = request.response;
 
       if (Boom.isBoom(response)) {
-        return response;
+        return h.continue;
       }
 
       if (response.variety === 'view') {
